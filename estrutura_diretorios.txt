@@ -1,0 +1,11 @@
+quizsec/
+├── quizsec/
+│   ├── __init__.py
+│   ├── settings.py          # Configurações principais
+│   ├── urls.py              # Roteamento de URLs
+│   ├── wsgi.py              # Interface WSGI
+│   └── asgi.py
+├── core/
+│   ├── migrations/          # Migrações do banco
+│   ├── models.py            # Modelos de dados
+│   ├── vie
