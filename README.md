@@ -31,3 +31,12 @@ a partir de agora, a página estará disponível para o acesso em ser navegador,
 na barra de endereço do navegador digite: localhost:8000
 
 para encerrar o servidor web, na janela do terminal que ficou aberta, dê um "CTRL+C".
+
+
+para ter acesso a administração do site, vá em: localhost:8000/admin
+e use:
+
+usuario: root
+senha: root
+
+para ter acesso total ao banco de dados.
