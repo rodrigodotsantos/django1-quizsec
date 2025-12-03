@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Desempenho dos Usuários{% endblock %}
+{% block content %}
+<h2>Desempenho dos Usuários</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Usuário</th>
+      <th>Tentativas</th>
+      <th>Pontuação total</th>
+      <th>Acertos</th>
+      <th>Erros</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in users_stats %}
+    <tr>
+      <td>{{ row.user__username }}</td>
+      <td>{{ row.attempts_count }}</td>
+      <td>{{ row.total_score }}</td>
+      <td>{{ row.total_correct }}</td>
+      <td>{{ row.total_wrong }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

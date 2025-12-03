@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Resultado{% endblock %}
+{% block content %}
+<h2>Resultado do Quiz</h2>
+<p>Pontuação total: {{ attempt.score }}</p>
+<p>Acertos: {{ attempt.correct_count }}</p>
+<p>Erros: {{ attempt.wrong_count }}</p>
+<p>Data: {{ attempt.created_at }}</p>
+
+<a href="{% url 'play_quiz' %}" class="btn btn-primary mt-3">Jogar novamente</a>
+{% endblock %}

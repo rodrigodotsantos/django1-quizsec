@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Gestão de Perguntas{% endblock %}
+{% block content %}
+<h2>Gestão de Perguntas</h2>
+<a href="{% url 'admin_question_create' %}" class="btn btn-success mb-3">Nova pergunta</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Pergunta</th>
+      <th>Dificuldade</th>
+      <th>Pontos</th>
+      <th>Respondida</th>
+      <th>Acertos</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for q in questions %}
+    <tr>
+      <td>{{ q.id }}</td>
+      <td>{{ q.text }}</td>
+      <td>{{ q.get_difficulty_display }}</td>
+      <td>{{ q.points }}</td>
+      <td>{% if q.stats %}{{ q.stats.times_answered }}{% else %}0{% endif %}</td>
+      <td>{% if q.stats %}{{ q.stats.times_correct }}{% else %}0{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

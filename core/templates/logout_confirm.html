@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="alert alert-warning">
+  <h4>Deseja realmente sair?</h4>
+  <p>Você será redirecionado para a página inicial.</p>
+  <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+  <form method="post" class="d-inline">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Sair</button>
+  </form>
+</div>
+{% endblock %}

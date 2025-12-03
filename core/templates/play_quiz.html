@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Jogar quiz{% endblock %}
+{% block content %}
+<h2>Quiz de Segurança da Informação</h2>
+<form method="post">
+  {% csrf_token %}
+  {% for field in form %}
+    <div class="mb-3">
+      <label class="form-label"><strong>{{ forloop.counter }}. {{ field.label }}</strong></label>
+      {{ field }}
+    </div>
+  {% endfor %}
+  <button type="submit" class="btn btn-success">Enviar respostas</button>
+</form>
+{% endblock %}

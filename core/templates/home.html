@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Início{% endblock %}
+{% block content %}
+<h1>Quiz de Segurança da Informação</h1>
+<p>Responda perguntas sobre Marco Civil da Internet e LGPD.</p>
+{% if user.is_authenticated %}
+  <a class="btn btn-primary" href="{% url 'play_quiz' %}">Começar um quiz</a>
+{% else %}
+  <p>Faça login ou cadastro para jogar.</p>
+{% endif %}
+{% endblock %}

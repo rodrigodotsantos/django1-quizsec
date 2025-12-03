@@ -1,0 +1,2 @@
+Django==5.0.6   # ou a sua versão
+gunicorn==22.0.0

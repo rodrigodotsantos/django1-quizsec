@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Debug Autenticação</h2>
+<p><strong>Usuário:</strong> {{ user }}</p>
+<p><strong>Autenticado:</strong> {{ is_authenticated }}</p>
+<p><strong>Profile:</strong> {{ profile }}</p>
+<p><strong>Role:</strong> {{ profile.role }}</p>
+<a href="{% url 'logout' %}" class="btn btn-danger">TESTAR LOGOUT</a>
+{% endblock %}
