@@ -40,3 +40,5 @@ usuario: root
 senha: root
 
 para ter acesso total ao banco de dados.
+
+vídeo com demonstração do site: https://youtu.be/iJPwmOYd8_k
